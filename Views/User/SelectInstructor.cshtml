@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityUser>
+
+@{
+    ViewBag.Title = "Select Instructor";
+}
+
+<div>
+    @foreach (var role in Model)
+    {
+        <p>
+            <strong>@role.Email</strong>
+        </p>
+    }
+</div>

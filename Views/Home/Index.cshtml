@@ -1,0 +1,34 @@
+﻿@model Training.Models.UpcomingPassedCourseViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>FPT CORPORATION</h1>
+    <p class="lead">FPT Corporation's internal training program system</p>
+    <p><a href="https://fpt.com.vn/en/about-us" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<h1 class="course-group-heading">Upcoming Courses</h1>
+<div class="row">
+    @if (Model.UpcomingCourses.Any())
+    {
+        @Html.DisplayFor(x => x.UpcomingCourses)
+    }
+    else
+    {
+        <div class="col-md-4 col-sm-6 col-xs-12">No Courses</div>
+    }
+</div>
+
+<h1 class="course-group-heading">Passed Courses</h1>
+<div class="row">
+    @if (Model.PassedCourses.Any())
+    {
+        @Html.DisplayFor(x => x.PassedCourses)
+    }
+    else
+    {
+        <div class="col-md-4 col-sm-6 col-xs-12">No Courses</div>
+    }
+</div>

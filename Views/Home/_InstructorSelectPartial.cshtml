@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Training.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "Select Instructor";
+}
+
+<table class="table table-hover">
+    <tr>
+        <th>Email</th>
+        <th>Username</th>
+        <th></th>
+    </tr>
+    @foreach (var role in Model)
+    {
+        <tr>
+            <td>@role.Email</td>
+            <td>@role.UserName</td>
+            <td>
+                @*onclick='getElementById("selectin").value = "@role.Id"'*@
+                @*<button>@role.Email</button>*@
+                @Html.ActionLink(
+                     linkText: "Select",
+                     actionName: "PartialCreate",
+                     controllerName: "Courses",
+                     routeValues: new { id = role.Id },
+                     htmlAttributes: null)
+            </td>
+        </tr>
+    }
+</table>

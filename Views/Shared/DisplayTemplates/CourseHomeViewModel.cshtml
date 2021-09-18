@@ -1,0 +1,18 @@
+﻿@model Training.Models.CourseHomeViewModel
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="course-box">
+        <h2>@Model.Coursename</h2>
+
+        <span class="date">@Model.CourseDate</span>
+
+        @if (Model.CourseDescription != null)
+        {
+            <div class="description">Course Description: @Model.CourseDescription</div>
+        }
+        @if (Model.InstructorEmail != null)
+        {
+            <div class="instructorid">Instructor: @Model.InstructorEmail</div>
+        }
+    </div>
+</div>
